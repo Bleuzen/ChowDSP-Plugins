@@ -1,0 +1,12 @@
+[submodule "AnalogTapeModel"]
+	path = AnalogTapeModel
+	url = https://github.com/jatinchowdhury18/AnalogTapeModel
+[submodule "ChowMatrix"]
+	path = ChowMatrix
+	url = https://github.com/Chowdhury-DSP/ChowMatrix
+[submodule "KlonCentaur"]
+	path = KlonCentaur
+	url = https://github.com/jatinchowdhury18/KlonCentaur.git
+[submodule "ChowKick"]
+	path = ChowKick
+	url = https://github.com/Chowdhury-DSP/ChowKick.git
