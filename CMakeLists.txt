@@ -26,7 +26,11 @@ if(BUILD_CHOWMATRIX)
         SOURCE_DIR "${CHOWMATRIX_DIR}"
         # BINARY_DIR "${CHOWMATRIX_DIR}/build"
         CMAKE_ARGS "-DBUILD_RELEASE=ON"
+        STEP_TARGETS build
+        EXCLUDE_FROM_ALL TRUE
     )
+    add_custom_target(ChowMatrix ALL)
+    add_dependencies(ChowMatrix ChowMatrix_Package-build)
 endif()
 
 option(BUILD_CHOWCENTAUR "Build the KlonCentaur plugin" ON)
@@ -37,7 +41,11 @@ if(BUILD_CHOWCENTAUR)
         SOURCE_DIR "${CHOWCENTAUR_DIR}"
         # BINARY_DIR "${CHOWCENTAUR_DIR}/build"
         CMAKE_ARGS "-DBUILD_RELEASE=ON"
+        STEP_TARGETS build
+        EXCLUDE_FROM_ALL TRUE
     )
+    add_custom_target(KlonCentaur ALL)
+    add_dependencies(KlonCentaur KlonCentaur_Package-build)
 endif()
 
 option(BUILD_CHOWKICK "Build the ChowKick plugin" ON)
@@ -48,5 +56,9 @@ if(BUILD_CHOWKICK)
         SOURCE_DIR "${CHOWKICK_DIR}"
         # BINARY_DIR "${CHOWKICK_DIR}/build"
         CMAKE_ARGS "-DBUILD_RELEASE=ON"
+        STEP_TARGETS build
+        EXCLUDE_FROM_ALL TRUE
     )
+    add_custom_target(ChowKick ALL)
+    add_dependencies(ChowKick ChowKick_Package-build)
 endif()
