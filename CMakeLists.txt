@@ -70,3 +70,20 @@ if(BUILD_CHOWKICK)
     add_custom_target(ChowKick ALL)
     add_dependencies(ChowKick ChowKick_Package-build)
 endif()
+
+option(BUILD_BYOD "Build the BYOD plugin" OFF)
+if(BUILD_BYOD)
+    message(STATUS "Configuring build for BYOD")
+    set(CHOWKICK_DIR "${CMAKE_SOURCE_DIR}/BYOD")
+    ExternalProject_Add(BYOD_Package
+        SOURCE_DIR "${BYOD_DIR}"
+        # BINARY_DIR "${BYOD_DIR}/build"
+        # BINARY_DIR "build/BYOD"
+        # BUILD_IN_SOURCE TRUE
+        CMAKE_ARGS "-DBUILD_RELEASE=ON"
+        STEP_TARGETS build
+        EXCLUDE_FROM_ALL TRUE
+    )
+    add_custom_target(BYOD ALL)
+    add_dependencies(BYOD BYOD_Package-build)
+endif()
