@@ -10,7 +10,7 @@ if(BUILD_CHOWTAPE)
     ExternalProject_Add(ChowTape_Package
         SOURCE_DIR "${CHOWTAPE_DIR}"
         # BINARY_DIR "${CHOWTAPE_DIR}/build"
-        BINARY_DIR "build/ChowTape"
+        # BINARY_DIR "build/ChowTape"
         # BUILD_IN_SOURCE TRUE
         CMAKE_ARGS "-DBUILD_RELEASE=ON"
         STEP_TARGETS build
@@ -27,7 +27,7 @@ if(BUILD_CHOWMATRIX)
     ExternalProject_Add(ChowMatrix_Package
         SOURCE_DIR "${CHOWMATRIX_DIR}"
         # BINARY_DIR "${CHOWMATRIX_DIR}/build"
-        BINARY_DIR "build/ChowMatrix"
+        # BINARY_DIR "build/ChowMatrix"
         # BUILD_IN_SOURCE TRUE
         CMAKE_ARGS "-DBUILD_RELEASE=ON"
         STEP_TARGETS build
@@ -44,7 +44,7 @@ if(BUILD_CHOWCENTAUR)
     ExternalProject_Add(KlonCentaur_Package
         SOURCE_DIR "${CHOWCENTAUR_DIR}"
         # BINARY_DIR "${CHOWCENTAUR_DIR}/build"
-        BINARY_DIR "build/KlonCentaur"
+        # BINARY_DIR "build/KlonCentaur"
         # BUILD_IN_SOURCE TRUE
         CMAKE_ARGS "-DBUILD_RELEASE=ON"
         STEP_TARGETS build
@@ -61,7 +61,7 @@ if(BUILD_CHOWKICK)
     ExternalProject_Add(ChowKick_Package
         SOURCE_DIR "${CHOWKICK_DIR}"
         # BINARY_DIR "${CHOWKICK_DIR}/build"
-        BINARY_DIR "build/ChowKick"
+        # BINARY_DIR "build/ChowKick"
         # BUILD_IN_SOURCE TRUE
         CMAKE_ARGS "-DBUILD_RELEASE=ON"
         STEP_TARGETS build
