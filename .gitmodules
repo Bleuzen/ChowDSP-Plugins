@@ -10,3 +10,6 @@
 [submodule "ChowKick"]
 	path = ChowKick
 	url = https://github.com/Chowdhury-DSP/ChowKick.git
+[submodule "BYOD"]
+	path = BYOD
+	url = https://github.com/Chowdhury-DSP/BYOD.git
