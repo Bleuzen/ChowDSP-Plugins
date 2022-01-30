@@ -11,6 +11,7 @@ if(BUILD_CHOWTAPE)
         SOURCE_DIR "${CHOWTAPE_DIR}"
         # BINARY_DIR "${CHOWTAPE_DIR}/build"
         BINARY_DIR "build/ChowTape"
+        # BUILD_IN_SOURCE TRUE
         CMAKE_ARGS "-DBUILD_RELEASE=ON"
         STEP_TARGETS build
         EXCLUDE_FROM_ALL TRUE
@@ -27,6 +28,7 @@ if(BUILD_CHOWMATRIX)
         SOURCE_DIR "${CHOWMATRIX_DIR}"
         # BINARY_DIR "${CHOWMATRIX_DIR}/build"
         BINARY_DIR "build/ChowMatrix"
+        # BUILD_IN_SOURCE TRUE
         CMAKE_ARGS "-DBUILD_RELEASE=ON"
         STEP_TARGETS build
         EXCLUDE_FROM_ALL TRUE
@@ -43,6 +45,7 @@ if(BUILD_CHOWCENTAUR)
         SOURCE_DIR "${CHOWCENTAUR_DIR}"
         # BINARY_DIR "${CHOWCENTAUR_DIR}/build"
         BINARY_DIR "build/KlonCentaur"
+        # BUILD_IN_SOURCE TRUE
         CMAKE_ARGS "-DBUILD_RELEASE=ON"
         STEP_TARGETS build
         EXCLUDE_FROM_ALL TRUE
@@ -59,6 +62,7 @@ if(BUILD_CHOWKICK)
         SOURCE_DIR "${CHOWKICK_DIR}"
         # BINARY_DIR "${CHOWKICK_DIR}/build"
         BINARY_DIR "build/ChowKick"
+        # BUILD_IN_SOURCE TRUE
         CMAKE_ARGS "-DBUILD_RELEASE=ON"
         STEP_TARGETS build
         EXCLUDE_FROM_ALL TRUE
