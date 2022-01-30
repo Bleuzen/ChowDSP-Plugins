@@ -74,7 +74,7 @@ endif()
 option(BUILD_BYOD "Build the BYOD plugin" OFF)
 if(BUILD_BYOD)
     message(STATUS "Configuring build for BYOD")
-    set(CHOWKICK_DIR "${CMAKE_SOURCE_DIR}/BYOD")
+    set(BYOD_DIR "${CMAKE_SOURCE_DIR}/BYOD")
     ExternalProject_Add(BYOD_Package
         SOURCE_DIR "${BYOD_DIR}"
         # BINARY_DIR "${BYOD_DIR}/build"
