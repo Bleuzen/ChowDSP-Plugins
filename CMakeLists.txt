@@ -11,7 +11,11 @@ if(BUILD_CHOWTAPE)
         SOURCE_DIR "${CHOWTAPE_DIR}"
         # BINARY_DIR "${CHOWTAPE_DIR}/build"
         CMAKE_ARGS "-DBUILD_RELEASE=ON"
+        STEP_TARGETS build
+        EXCLUDE_FROM_ALL TRUE
     )
+    add_custom_target(CHOWTapeModel ALL)
+    add_dependencies(CHOWTapeModel ChowTape_Package-build)
 endif()
 
 option(BUILD_CHOWMATRIX "Build the ChowMatrix plugin" ON)
