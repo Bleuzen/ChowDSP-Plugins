@@ -10,12 +10,13 @@ if(BUILD_CHOWTAPE)
     ExternalProject_Add(ChowTape_Package
         SOURCE_DIR "${CHOWTAPE_DIR}"
         # BINARY_DIR "${CHOWTAPE_DIR}/build"
+        BINARY_DIR "build/ChowTape"
         CMAKE_ARGS "-DBUILD_RELEASE=ON"
         STEP_TARGETS build
         EXCLUDE_FROM_ALL TRUE
     )
-    add_custom_target(CHOWTapeModel ALL)
-    add_dependencies(CHOWTapeModel ChowTape_Package-build)
+    add_custom_target(ChowTape ALL)
+    add_dependencies(ChowTape ChowTape_Package-build)
 endif()
 
 option(BUILD_CHOWMATRIX "Build the ChowMatrix plugin" ON)
@@ -25,6 +26,7 @@ if(BUILD_CHOWMATRIX)
     ExternalProject_Add(ChowMatrix_Package
         SOURCE_DIR "${CHOWMATRIX_DIR}"
         # BINARY_DIR "${CHOWMATRIX_DIR}/build"
+        BINARY_DIR "build/ChowMatrix"
         CMAKE_ARGS "-DBUILD_RELEASE=ON"
         STEP_TARGETS build
         EXCLUDE_FROM_ALL TRUE
@@ -40,6 +42,7 @@ if(BUILD_CHOWCENTAUR)
     ExternalProject_Add(KlonCentaur_Package
         SOURCE_DIR "${CHOWCENTAUR_DIR}"
         # BINARY_DIR "${CHOWCENTAUR_DIR}/build"
+        BINARY_DIR "build/KlonCentaur"
         CMAKE_ARGS "-DBUILD_RELEASE=ON"
         STEP_TARGETS build
         EXCLUDE_FROM_ALL TRUE
@@ -55,6 +58,7 @@ if(BUILD_CHOWKICK)
     ExternalProject_Add(ChowKick_Package
         SOURCE_DIR "${CHOWKICK_DIR}"
         # BINARY_DIR "${CHOWKICK_DIR}/build"
+        BINARY_DIR "build/ChowKick"
         CMAKE_ARGS "-DBUILD_RELEASE=ON"
         STEP_TARGETS build
         EXCLUDE_FROM_ALL TRUE
