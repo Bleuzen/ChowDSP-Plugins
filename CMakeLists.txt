@@ -43,7 +43,7 @@ if(BUILD_CHOWPHASER)
     set(CHOWPHASER_DIR "${CMAKE_SOURCE_DIR}/ChowPhaser")
     ExternalProject_Add(ChowPhaser_Package
         SOURCE_DIR "${CHOWPHASER_DIR}"
-        # BINARY_DIR "${CHOWMATRIX_DIR}/build"
+        # BINARY_DIR "${CHOWPHASER_DIR}/build"
         # BINARY_DIR "build/ChowPhaser"
         # BUILD_IN_SOURCE TRUE
         CMAKE_ARGS "-DBUILD_RELEASE=ON -DCMAKE_BUILD_TYPE=Release"
