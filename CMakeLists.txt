@@ -40,9 +40,9 @@ endif()
 option(BUILD_CHOWPHASER "Build the ChowPhaser plugin" ON)
 if(BUILD_CHOWPHASER)
     message(STATUS "Configuring build for ChowPhaser")
-    set(CHOWMATRIX_DIR "${CMAKE_SOURCE_DIR}/ChowPhaser")
+    set(CHOWPHASER_DIR "${CMAKE_SOURCE_DIR}/ChowPhaser")
     ExternalProject_Add(ChowPhaser_Package
-        SOURCE_DIR "${CHOWMATRIX_DIR}"
+        SOURCE_DIR "${CHOWPHASER_DIR}"
         # BINARY_DIR "${CHOWMATRIX_DIR}/build"
         # BINARY_DIR "build/ChowPhaser"
         # BUILD_IN_SOURCE TRUE
