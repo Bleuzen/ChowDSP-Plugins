@@ -13,3 +13,6 @@
 [submodule "BYOD"]
 	path = BYOD
 	url = https://github.com/Chowdhury-DSP/BYOD.git
+[submodule "ChowPhaser"]
+	path = ChowPhaser
+	url = https://github.com/jatinchowdhury18/ChowPhaser.git

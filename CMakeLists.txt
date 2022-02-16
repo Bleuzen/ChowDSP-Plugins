@@ -37,6 +37,23 @@ if(BUILD_CHOWMATRIX)
     add_dependencies(ChowMatrix ChowMatrix_Package-build)
 endif()
 
+option(BUILD_CHOWPHASER "Build the ChowPhaser plugin" ON)
+if(BUILD_CHOWPHASER)
+    message(STATUS "Configuring build for ChowPhaser")
+    set(CHOWMATRIX_DIR "${CMAKE_SOURCE_DIR}/ChowPhaser")
+    ExternalProject_Add(ChowPhaser_Package
+        SOURCE_DIR "${CHOWMATRIX_DIR}"
+        # BINARY_DIR "${CHOWMATRIX_DIR}/build"
+        # BINARY_DIR "build/ChowPhaser"
+        # BUILD_IN_SOURCE TRUE
+        CMAKE_ARGS "-DBUILD_RELEASE=ON -DCMAKE_BUILD_TYPE=Release"
+        STEP_TARGETS build
+        EXCLUDE_FROM_ALL TRUE
+    )
+    add_custom_target(ChowPhaser ALL)
+    add_dependencies(ChowPhaser ChowPhaser_Package-build)
+endif()
+
 option(BUILD_CHOWCENTAUR "Build the KlonCentaur plugin" ON)
 if(BUILD_CHOWCENTAUR)
     message(STATUS "Configuring build for KlonCentaur")
